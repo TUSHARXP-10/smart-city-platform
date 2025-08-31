@@ -1,0 +1,16 @@
+name = "alert-processor"
+main = "src/index.js"
+compatibility_date = "2025-08-31"
+
+# Queue consumer binding
+[[queues.consumers]]
+queue = "alerts"
+binding = "ALERT_QUEUE"
+
+# Environment variables
+[vars]
+NOTIFY_ENDPOINT = "https://hooks.example.com/alert"
+
+# Production environment can override variables
+[env.production]
+NOTIFY_ENDPOINT = "https://hooks.example.com/alert"

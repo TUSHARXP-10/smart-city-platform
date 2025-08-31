@@ -1,0 +1,18 @@
+{
+  "name": "smart-city-api",
+  "version": "1.0.0",
+  "description": "Smart City API for sensor data and threshold alerts",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "echo 'Build complete'",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "keywords": ["cloudflare", "workers", "smart-city", "sensors"],
+  "author": "",
+  "license": "MIT"
+}

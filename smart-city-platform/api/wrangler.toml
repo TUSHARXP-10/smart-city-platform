@@ -1,0 +1,17 @@
+name = "smart-city-api"
+main = "src/index.js"
+compatibility_date = "2025-08-31"
+
+[durable_objects]
+bindings = [
+  { name = "SENSOR_HISTORY", class_name = "SensorHistory" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["SensorHistory"]
+
+# Queue binding for alerts
+[[queues.producers]]
+queue = "alerts"
+binding = "ALERT_QUEUE"
